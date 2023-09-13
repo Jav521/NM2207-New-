@@ -1,0 +1,21 @@
+---
+title: "Challenge-1"
+author: "Heng Javier"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document: default      
+  html_document: default
+---
+```{r, out.height= "350px",out.width= "450px",echo= FALSE,eval= TRUE,fig.cap="Hi"}
+knitr::include_graphics("LinkedinPic.jpg") 
+```
+```{r, out.height= "350px",out.width= "450px",echo= FALSE,eval= TRUE,fig.cap="RStudio Layout"}
+knitr::include_graphics("Code.jpg") 
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About Me
+Hi! I'm Javier, a Year 3 Psychology Student who is second Majoring in Communications and New Media. I enjoy making music in free time on the piano and I love to play games. 
