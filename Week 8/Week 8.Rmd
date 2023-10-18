@@ -1,0 +1,108 @@
+---
+title: "Week 8"
+author: "Heng Javier"
+date: "2023-10-10"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r, eval=T,echo=TRUE}
+library(shiny)
+runExample("01_hello")
+
+```
+```{r, eval=T,echo=TRUE}
+library(shiny)
+runApp("App-1")
+runApp("myapp")
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
+```{r, eval=T,echo=TRUE}
+```
