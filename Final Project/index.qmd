@@ -1,0 +1,14 @@
+---
+title: "Jav521.github.io"
+---
+
+Hey everyone! I'm Javier,a student taking NM2207 this semester. Here you can see my Github and whatever I've been working on this sem!
+
+```         
+          https://github.com/Jav521/NM2207-New-
+          
+```
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
