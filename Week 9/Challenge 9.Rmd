@@ -2,9 +2,9 @@
 title: "Week 9 Challenge"
 author: "Heng Javier"
 date: "2023-10-18"
-output: html_document
+output: pdf_document
 ---
-
+#Codealong
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -95,6 +95,7 @@ df %>%
  )
 
 ```
+#Challenge
 ```{r,echo=TRUE,eval=TRUE}
 #Question 1 
 tidybillboard<- billboard%>%
@@ -109,10 +110,19 @@ tidybillboard <- mutate(tidybillboard,week = parse_number(week))
 
 tidybillboard
 
-ggplot(data = tidybillboard, mapping = aes(x=week, y=rank), environment = parent.frame()) + geom_line()
-ggtitle("Graph of Rank against Week ")
+ggplot(data = tidybillboard, mapping = aes(x=week, y=rank,group=track), environment = parent.frame()) + geom_line()+ ggtitle("Graph of Rank against Week ")
 ```
 ```{r,echo=TRUE,eval=TRUE}
+#Question 2
+distinct(cms_patient_experience,measure_cd)
+## 6 CAHPS_GRP_12
+tidycms<- cms_patient_experience%>%
+pivot_wider(
+id_cols= starts_with("org"),
+names_from="measure_cd",
+values_from = "prf_rate"
+)
+tidycms
 
 ```
 ```{r,echo=TRUE,eval=TRUE}
