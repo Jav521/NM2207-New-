@@ -44,7 +44,6 @@ Using the select command, create a new dataframe containing only the "date," "ch
 ```{r, eval=T,echo=TRUE}
 # Enter code here
 df1<-select(comm_data,date,channel,message)
-
 ```
 <br>
 
