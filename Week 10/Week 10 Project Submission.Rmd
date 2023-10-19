@@ -1,0 +1,41 @@
+---
+title: "Week 9 Project Submission"
+author: "Heng Javier"
+date: "2023-10-17"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Week 9 Questions:
+
+# (1) What is the topic that you have finalized? (Answer in 1 or 2 sentences).
+I will be doing an analysis of Taylor Swift's music/albums on Spotify.Specifically, I will be focusing on aspects or her music such as tempo, valence and time signature.
+
+# (2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+I will be using the Taylor Swift dataset from Tidy Tuesday.
+
+Week 10 Questions:
+
+# (1) What is the question that you are going to answer? (Answer: One sentence that ends with a question mark that could act like the title of your data story),
+What is Taylor Swift's music like? 
+# (2) Why is this an important question? (Answer: 3 sentences, each of which has some evidence, e.g., “According to the United Nations...” to justify why the question you have chosen is important),
+In August 2023, Taylor Swift was the first female artist to reach 100 million monthly listeners. 
+Taylor Swift has a $740 million net worth as of June 2023 (according to Forbes).
+Analysing the stats of her music will help other musicians to figure out the ingredients in her music to cook up hits just like her.
+# (3) Which rows and columns of the dataset will be used to answer this question? (Answer: Actual names of the variables in the dataset that you plan to use).
+I will use track_name, danceability, energy, key, 
+
+```{r,echo=TRUE,eval=TRUE}
+library(tidyverse)
+install.packages("tidytuesdayR")
+
+tuesdata <- tidytuesdayR::tt_load('2023-10-17')
+
+taylor_album_songs <- tuesdata$taylor_album_songs
+taylor_all_songs <- tuesdata$taylor_all_songs
+taylor_albums <- tuesdata$taylor_albums
+
+taylor_album_songs
+```
