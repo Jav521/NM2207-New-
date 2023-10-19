@@ -8,10 +8,8 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# (1) I will be doing an analysis of Taylor Swift's music/albums on Spotify.Specifically, I will be focusing on aspects or her music such as tempo, valence and time signature.
+# (1) What is the topic that you have finalized? (Answer in 1 or 2 sentences).
+I will be doing an analysis of Taylor Swift's music/albums on Spotify.Specifically, I will be focusing on aspects or her music such as tempo, valence and time signature.
 
-# (2) I will be using the Taylor Swift dataset from Tidy Tuesday. 
-```{r,echo=TRUE,eval=TRUE}
-library(shiny)
-runApp("app")
-```
+# (2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+I will be using the Taylor Swift dataset from Tidy Tuesday. 
