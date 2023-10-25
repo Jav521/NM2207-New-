@@ -1,7 +1,7 @@
 ---
-title: "Week 9 Project Submission"
+title: "Week 10 Project Submission"
 author: "Heng Javier"
-date: "2023-10-17"
+date: "2023-10-25"
 output: pdf_document
 ---
 
@@ -15,6 +15,7 @@ I will be doing an analysis of Taylor Swift's music/albums on Spotify.Specifical
 
 # (2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
 I will be using the Taylor Swift dataset from Tidy Tuesday. Specifically the taylor_all_songs dataset.
+
 
 Week 10 Questions:
 
@@ -31,9 +32,11 @@ Columns I will use include track_name, danceability, energy, key, loudness, mode
 
 As for rows used, I will use every row! However, data will be cleaned in the event of NA data. 
 
+# Dataset used: taylor_all_songs
 ```{r,echo=TRUE,eval=TRUE}
 library(tidyverse)
-install.packages("tidytuesdayR")
+install.packages("tidytuesdayR",repos = "http://cran.us.r-project.org")
+library(tidytuesdayR)
 
 tuesdata <- tidytuesdayR::tt_load('2023-10-17')
 
