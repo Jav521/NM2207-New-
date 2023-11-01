@@ -32,6 +32,33 @@ Columns I will use include track_name, danceability, energy, key, loudness, mode
 
 As for rows used, I will use every row! However, data will be cleaned in the event of NA data. 
 
+Week 11 Questions:
+
+# (1) List the visualizations that you are going to use in your project (Answer: What are the variables that you are going to plot? How will it answer your larger question?)
+Track Release date vs Danceability, energy, liveliness, loudness 
+Tempo vs liveliness 
+# (2) How do you plan to make it interactive? (Answer: features of ggplot2/shiny/markdown do you plan to use to make the story interactive) 
+Using one of the Shiny templates, I will customize it to make the various graphs interactive.I will also include some ggplots.  
+
+# (3) What concepts incorporated in your project were taught in the course and which ones were self-learnt? (Answer: Create a table with topics in one column and Weeks in the other to indicate which concept taught in which week is being used. Leave the entry of the Week column empty for self-learnt concepts)
+```{r,echo=TRUE,eval=TRUE}
+library(tidyverse)
+
+
+# create matrix 
+data= matrix(c('ggplot',2,'shiny',8), ncol=2, byrow=TRUE)
+ 
+# specify the column names and row names of matrix
+colnames(data) = c("Concept","Week")
+rownames(data) <- c(1:2)
+ 
+# assign to table
+final=as.table(data)
+ 
+# display
+final
+```
+
 # Dataset used: taylor_all_songs
 ```{r,echo=TRUE,eval=TRUE}
 library(tidyverse)
