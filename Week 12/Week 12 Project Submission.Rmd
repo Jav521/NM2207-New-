@@ -1,5 +1,5 @@
 ---
-title: "Week 11 Project Submission"
+title: "Week 12 Project Submission"
 author: "Heng Javier"
 date: "2023-10-25"
 output: pdf_document
@@ -49,17 +49,15 @@ To find out if Swift has a favourite key for her music.
 Using Shiny, I can include some ggplots which can be changed around when clicking a different tab in a dropdown menu. 
 Slider
 Youtube videos of Taylor's highest scoring songs
-Radio button to display a song that scores high on a particular domain if the user likes that genre of music
-
-
+Radio button to display a song that scores high on a particular domain if the user likes that genre of music.
 
 #(3) What concepts incorporated in your project were taught in the course and which ones were self-learnt? (Answer: Create a table with topics in one column and Weeks in the other to indicate which concept taught in which week is being used. Leave the entry of the Week column empty for self-learnt concepts)
 ```{r,echo=TRUE,eval=TRUE}
 # create matrix with 4 columns and 4 rows
-data= matrix(c("ggplot","2&7","Tidy data, selecting, filtering and arranging", 4, "Functions", 5, "Shiny",8), ncol=2, byrow=TRUE)
+data= matrix(c("ggplot","2&7","Tidy data, selecting, filtering and arranging", 4, "Functions", 5, "Shiny",8, "if else", 0), ncol=2, byrow=TRUE)
 # specify the column names and row names of matrix
 colnames(data) = c('concept','week')
-rownames(data) <- c(1:4)
+rownames(data) <- c(1:5)
  
 # assign to table
 final=as.table(data)
@@ -67,7 +65,10 @@ final=as.table(data)
 # display
 final
 ```
+Week 12 Questions:
 
+#(1)Include the challenges and errors that you faced and how you overcame them (if any)
+A lot of code was not taught and interactive features required me to think out of the box. I first looked for code online, then asked my TAs to help me make sense of the code before applying it. 
 ```{r,echo=TRUE,eval=TRUE}
 # create matrix with 4 columns and 4 rows
 data= matrix(c(1:16), ncol=4, byrow=TRUE)
