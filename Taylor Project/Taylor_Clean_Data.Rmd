@@ -50,6 +50,16 @@ Least_Danceable
   select(energy,track_release)
 ggplot(data=taylor_all_songs, mapping=aes(x=track_release,y=energy)) +
 geom_point(show.legend=TRUE) + labs(x="track_release",y="energy")+theme_bw()
+Most_Energy <- taylor_all_songs %>%
+  select(track_name,energy,track_release)%>%
+  arrange(desc(Energy)) %>%
+  slice(1)
+Most_Energy
+Least_Energy <- taylor_all_songs %>%
+  select(track_name,energy,track_release)%>%
+  arrange(Energy) %>%
+  slice(1)
+Least_Energy
 ```
 ```{r,echo=TRUE,eval=TRUE}
 #Scatter plot: Tempo against track_release 
@@ -58,6 +68,16 @@ geom_point(show.legend=TRUE) + labs(x="track_release",y="energy")+theme_bw()
 Tempo
 ggplot(data=taylor_all_songs, mapping=aes(x=track_release,y=tempo)) +
 geom_point(show.legend=TRUE) + labs(x="track_release",y="tempo")+theme_bw()
+Fastest_Tempo <- taylor_all_songs %>%
+  select(track_name,tempo,track_release)%>%
+  arrange(desc(tempo)) %>%
+  slice(1)
+Fastest_Tempo
+Slowest_Tempo <- taylor_all_songs %>%
+  select(track_name,tempo,track_release)%>%
+  arrange(tempo) %>%
+  slice(1)
+Slowest_Tempo
 ```
 ```{r,echo=TRUE,eval=TRUE}
 #Scatter plot:Tempo against Danceability 
