@@ -119,6 +119,7 @@ The second app showed a histogram of the various ratings of Taylor Swift's songs
 The third app was a fun app I made to see the number of songs in a particular key. I noted that the more used keys amidst Swift's music were actually "simpler" keys with less accidentals in their key signature. It was interesting to note how she used more major than minor keys, which could have contributed to her music sounding happier.
 
 Overall, I found that while Taylor Swift's music had some similarities, she had quite a diverse portfolio of music. Perhaps it's not so much about the type and genre of music itself, but the person singing and making the music!
+
 # (5) How did you implement this entire project? Were there any new concepts that you learnt to implement some aspects of it?
 
 At first, I found it difficult to include interactive elements, and I was very frustrated at my lack of coding knowledge. However, by referencing other people's codes online and figuring out how they work, my workflow got faster and I became more confident in doing this project. 
