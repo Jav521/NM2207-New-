@@ -100,7 +100,7 @@ My data story is Taylor Swift themed! I aim to look at Taylor Swift's music thro
 In August 2023, Taylor Swift was the first female artist to reach 100 million monthly listeners (Hazeeq, 2023). Furthermore, Taylor Swift has an
 estimated $1.1 million net worth as of October 2023 (Mercuri, 2023).
 
-Swift is evidently a very popular and famous artiste with world renowned fame. And her music may contain some key elements which make it popular among mainstream audiences.
+Swift is evidently a very popular and famous artist with world renowned fame. And her music may contain some key elements which make it popular among mainstream audiences.
 
 Analysing the stats of her music will help other musicians to figure out the ingredients in her music to cook up hits just like her, and figuring out how her music changed can give us some insights to how she has changed as a celebrity. 
 
@@ -111,16 +111,19 @@ I used the Taylor Swift dataset from Tidy Tuesday. Specifically the taylor_all_s
 # (4) What are the insights from the data and how are they depicted in plots?
 
 Using R Shiny, I created 3 apps. 
+
 The first app had a graph which showed how danceability, energy and tempo of Taylor Swift's songs changed over time (release_date). Although we found an interesting observation that the tempo of her songs was relatively fast (mean=125BPM), there was no clear trend with these three and the release date of her songs.
 
 The second app showed a histogram of the various ratings of Taylor Swift's songs on Spotify(e.g. Speechiness, Acousticness etc.). I found that Taylor Swift actually had more variation within some of the statistics than I thought. For example, she had many songs with various different tempos, energy and moods. However, something that was interesting to note was that Taylor's music was not very acoustic, despite her reputation as an indie musician. She also mostly had songs that were low in speechiness and instrumentalness, showing that her songs were mostly consisted of vocal singing instead of instruments or verbal speech.
 
 The third app was a fun app I made to see the number of songs in a particular key. I noted that the more used keys amidst Swift's music were actually "simpler" keys with less accidentals in their key signature.
 
-
+Overall, I found that while Taylor Swift's music had some similarities, she had quite a diverse portfolio of music. Perhaps it's not so much about the type and genre of music itself, but the person singing and making the music!
 # (5) How did you implement this entire project? Were there any new concepts that you learnt to implement some aspects of it?
 
-At first, I found it difficult to include interactive elements, and I was very frustrated at my lack of coding knowledge. However, by referencing other people's codes online and figuring out how they work, my workflow got faster and I became more confident in doing this project.
+At first, I found it difficult to include interactive elements, and I was very frustrated at my lack of coding knowledge. However, by referencing other people's codes online and figuring out how they work, my workflow got faster and I became more confident in doing this project. 
+
+I also asked my tutors for advice on this topic, which helped me to get some ideas, such as the radio button idea. My tutors also helped me to improve my project in the end, by giving me suggestions on how to make my interface intuitive as well as how to make my website more aesthetic.
 
 One important concept that really helped my workflow was the "if/else" statement. It was very important for setting up conditions under the server header for my interface. I also learnt how to include radio buttons in my interface, and how to create a reactive interface. It was challenging at the start, but it got fun once I began to get the hang of it. 
 
