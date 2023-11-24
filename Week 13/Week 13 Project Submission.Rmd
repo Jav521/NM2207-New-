@@ -1,0 +1,140 @@
+---
+title: "Week 13 Project Submission"
+author: "Heng Javier"
+date: "2023-11-15"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Week 9 Questions:
+
+# (1) What is the topic that you have finalized? (Answer in 1 or 2 sentences).
+I will be doing an analysis of Taylor Swift's music/albums on Spotify.Specifically, I will be focusing on aspects or her music such as tempo, valence and time signature.
+
+# (2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+I will be using the Taylor Swift dataset from Tidy Tuesday. Specifically the taylor_all_songs dataset.
+
+
+# Week 10 Questions:
+
+# (1) What is the question that you are going to answer? (Answer: One sentence that ends with a question mark that could act like the title of your data story),
+What is Taylor Swift's music like? And how has her music changed over the years?
+
+# (2) Why is this an important question? (Answer: 3 sentences, each of which has some evidence, e.g., “According to the United Nations...” to justify why the question you have chosen is important),
+In August 2023, Taylor Swift was the first female artist to reach 100 million monthly listeners. 
+Taylor Swift has a $740 million net worth as of June 2023 (according to Forbes).
+Analysing the stats of her music will help other musicians to figure out the ingredients in her music to cook up hits just like her, and figuring out how her music changed can give us some insights to how she has changed as a celebrity. 
+
+# (3) Which rows and columns of the dataset will be used to answer this question? (Answer: Actual names of the variables in the dataset that you plan to use).
+Columns I will use include track_name, danceability, energy, key, loudness, mode, speechiness,acousticness, instrumentalness, liveness, tempo, explicit, key_mode, track_release. All variables are defined as per https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-17/readme.md.
+
+As for rows used, I will use every row! However, data will be cleaned in the event of NA data. 
+
+# Week 11 Questions:
+
+# (1) List the visualizations that you are going to use in your project (Answer: What are the variables that you are going to plot? How will it answer your larger question?)
+I will plot the following graphs:
+-Graph of danceability, energy, tempo against track_release. This will allow us to see if Swift's music has become more energetic or slower and more melancholic over the years. 
+
+-Graph of danceability against energy, tempo, loudness. Does danceability mean more energy and loud music? It is important to know the difference between these variables to properly understand the data.
+
+-Graph of acousticness/liveness against track_release
+Did Swift have more acoustic or live tracks at any point in time? This graph will help us to see more. 
+
+-key_mode against track_name
+To find out if Swift has a favourite key for her music. 
+
+
+
+# (2) How do you plan to make it interactive? (Answer: features of ggplot2/shiny/markdown do you plan to use to make the story interactive)
+
+Using Shiny, I can include some ggplots which can be changed around when clicking a different tab in a dropdown menu. 
+Slider
+Youtube videos of Taylor's highest scoring songs
+Radio button to display a song that scores high on a particular domain if the user likes that genre of music.
+
+# (3) What concepts incorporated in your project were taught in the course and which ones were self-learnt? (Answer: Create a table with topics in one column and Weeks in the other to indicate which concept taught in which week is being used. Leave the entry of the Week column empty for self-learnt concepts)
+
+```{r,echo=TRUE,eval=TRUE}
+# create matrix with 4 columns and 4 rows
+data= matrix(c("ggplot","2&7","Tidy data, selecting, filtering and arranging", 4, "Functions", 5, "Shiny",8, "if else", 0), ncol=2, byrow=TRUE)
+# specify the column names and row names of matrix
+colnames(data) = c('concept','week')
+rownames(data) <- c(1:5)
+ 
+# assign to table
+final=as.table(data)
+ 
+# display
+final
+```
+# Week 12 Questions:
+
+# (1)Include the challenges and errors that you faced and how you overcame them (if any)
+
+A lot of code was not taught and interactive features required me to think out of the box. I first looked for code online, then asked my TAs to help me make sense of the code before applying it. 
+```{r,echo=TRUE,eval=TRUE}
+# create matrix with 4 columns and 4 rows
+data= matrix(c(1:16), ncol=4, byrow=TRUE)
+ 
+# specify the column names and row names of matrix
+colnames(data) = c('col1','col2','col3','col4')
+rownames(data) <- c('row1','row2','row3','row4')
+ 
+# assign to table
+final=as.table(data)
+ 
+# display
+final
+```
+# Week 13 Questions (Final Submission): 
+
+# (1) What is the theme of your data story?
+
+My data story is Taylor Swift themed! I aim to look at Taylor Swift's music through her Spotify data and find out what makes her music so special. 
+
+# (2) Why is it important to address this question?
+
+In August 2023, Taylor Swift was the first female artist to reach 100 million monthly listeners (Hazeeq, 2023). Furthermore, Taylor Swift has an
+estimated $1.1 million net worth as of October 2023 (Mercuri, 2023).
+
+Swift is evidently a very popular and famous artist with world renowned fame. And her music may contain some key elements which make it popular among mainstream audiences.
+
+Analysing the stats of her music will help other musicians to figure out the ingredients in her music to cook up hits just like her, and figuring out how her music changed can give us some insights to how she has changed as a celebrity. 
+
+# (3) Why do you think the data sources that you have curated can help you answer the question?
+
+I used the Taylor Swift dataset from Tidy Tuesday. Specifically the taylor_all_songs dataset.This dataset contains scores rated by Spotify on Taylor Swift's music, for example, danceability, energy, and acousticness. These scores help us to peer deeper beyond popularity numbers and into what constitutes the music itself, allowing us to get a better glimpse into what makes Taylor Swift's music so good. 
+
+# (4) What are the insights from the data and how are they depicted in plots?
+
+Using R Shiny, I created 3 apps. 
+
+The first app had a graph which showed how danceability, energy and tempo of Taylor Swift's songs changed over time (release_date). Although we found an interesting observation that the tempo of her songs was relatively fast (mean=125BPM), there was no clear trend with these three and the release date of her songs.
+
+The second app showed a histogram of the various ratings of Taylor Swift's songs on Spotify(e.g. Speechiness, Acousticness etc.). I found that Taylor Swift actually had more variation within some of the statistics than I thought. For example, she had many songs with various different tempos, energy and moods. However, something that was interesting to note was that Taylor's music was not very acoustic, despite her reputation as an indie musician. She also mostly had songs that were low in speechiness and instrumentalness, showing that her songs were mostly consisted of vocal singing instead of instruments or verbal speech.
+
+The third app was a fun app I made to see the number of songs in a particular key. I noted that the more used keys amidst Swift's music were actually "simpler" keys with less accidentals in their key signature. It was interesting to note how she used more major than minor keys, which could have contributed to her music sounding happier.
+
+Overall, I found that while Taylor Swift's music had some similarities, she had quite a diverse portfolio of music. Perhaps it's not so much about the type and genre of music itself, but the person singing and making the music!
+# (5) How did you implement this entire project? Were there any new concepts that you learnt to implement some aspects of it?
+
+At first, I found it difficult to include interactive elements, and I was very frustrated at my lack of coding knowledge. However, by referencing other people's codes online and figuring out how they work, my workflow got faster and I became more confident in doing this project. 
+
+I also asked my tutors for advice on this topic, which helped me to get some ideas, such as the radio button idea. My tutors also helped me to improve my project in the end, by giving me suggestions on how to make my interface intuitive as well as how to make my website more aesthetic.
+
+One important concept that really helped my workflow was the "if/else" statement. It was very important for setting up conditions under the server header for my interface. I also learnt how to include radio buttons in my interface, and how to create a reactive interface. It was challenging at the start, but it got fun once I began to get the hang of it. 
+
+# References:
+
+Hazeeq, S. (2023, August 31). Taylor Swift becomes first female artiste to     reach 100 million monthly listeners on Spotify. CNA Lifestyle.            https://cnalifestyle.channelnewsasia.com/entertainment/taylor-swift-sp     otify-100-million-monthly-listeners-369751
+
+Mercuri, M. (2023, October 30). Taylor swift didn’t need lucrative side       hustles to become a billionaire. Forbes.                     
+    https://www.forbes.com/sites/monicamercuri/2023/10/30/taylor-swift-did     nt-need-lucrative-side-hustles-to-become-a-billionaire/
+
+TidyTuesday. (2023). Taylor Swift all songs dataset [Data file]. Retrieved     from https://github.com/rfordatascience/tidytuesday/blob/master/data/2     023/2023-10-17/taylor_all_songs.csv
+    
+
+```
