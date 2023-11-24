@@ -1,0 +1,147 @@
+---
+title: "Taylor Clean Data"
+author: "Heng Javier"
+date: "2023-11-07"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r,echo=TRUE,eval=TRUE}
+  
+```
+```{r,echo=TRUE,eval=TRUE}
+library(tidyverse)
+install.packages("tidytuesdayR",repos = "http://cran.us.r-project.org")
+library(tidytuesdayR)
+
+tuesdata <- tidytuesdayR::tt_load('2023-10-17')
+
+taylor_all_songs <- tuesdata$taylor_all_songs
+
+
+taylor_all_songs
+count(taylor_all_songs)
+  
+```
+```{r,echo=TRUE,eval=TRUE}
+#Scatter Plot: Danceability against Track Release 
+  Danceability <- taylor_all_songs %>%
+  select(danceability,track_release)
+Danceability
+ggplot(data=taylor_all_songs, aes(x=track_release, y=danceability)) +
+  geom_point(stat="identity", fill="steelblue")
+Most_Danceable <- taylor_all_songs %>%
+  select(track_name,danceability,track_release)%>%
+  arrange(desc(danceability)) %>%
+  slice(1)
+Most_Danceable
+Least_Danceable <- taylor_all_songs %>%
+  select(track_name,danceability,track_release)%>%
+  arrange(danceability) %>%
+  slice(1)
+Least_Danceable
+#Did you know? Taylor Swift's most danceable song is "I Think He Knows", released in August 2019 with a danceability score of 0.897! Whereas, her least danceable song is The Archer, with a Spotify danceability score of 0.292. Guess she didn't quite hit the mark on that one…
+```
+```{r,echo=TRUE,eval=TRUE}
+#Scatter plot: Energy against track_release
+  Energy <- taylor_all_songs %>%
+  select(energy,track_release)
+ggplot(data=taylor_all_songs, mapping=aes(x=track_release,y=energy)) +
+geom_point(show.legend=TRUE) + labs(x="track_release",y="energy")+theme_bw()
+Most_Energy <- taylor_all_songs %>%
+  select(track_name,energy,track_release)%>%
+  arrange(desc(Energy)) %>%
+  slice(1)
+Most_Energy
+Least_Energy <- taylor_all_songs %>%
+  select(track_name,energy,track_release)%>%
+  arrange(Energy) %>%
+  slice(1)
+Least_Energy
+```
+```{r,echo=TRUE,eval=TRUE}
+#Scatter plot: Tempo against track_release 
+  Tempo <- taylor_all_songs %>%
+  select(tempo,track_release)
+Tempo
+ggplot(data=taylor_all_songs, mapping=aes(x=track_release,y=tempo)) +
+geom_point(show.legend=TRUE) + labs(x="track_release",y="tempo")+theme_bw()
+Fastest_Tempo <- taylor_all_songs %>%
+  select(track_name,tempo,track_release)%>%
+  arrange(desc(tempo)) %>%
+  slice(1)
+Fastest_Tempo
+Slowest_Tempo <- taylor_all_songs %>%
+  select(track_name,tempo,track_release)%>%
+  arrange(tempo) %>%
+  slice(1)
+Slowest_Tempo
+```
+```{r,echo=TRUE,eval=TRUE}
+#Scatter plot:Tempo against Danceability 
+ggplot(data=taylor_all_songs, mapping=aes(x=danceability,y=tempo)) +
+geom_point(show.legend=TRUE) + labs(x="danceability",y="tempo")+theme_bw()
+
+#Something interesting... the danceability of a song seems inversely correlated to the tempo of the song!
+  
+```
+```{r,echo=TRUE,eval=TRUE}
+ggplot(data=taylor_all_songs, aes(x=track_release, y=acousticness)) +
+  geom_point(show.legend=TRUE) + labs(x="track_release",y="acousticness")+theme_bw()
+Most_Acoustic <- taylor_all_songs %>%
+  select(track_name,acousticness,track_release)%>%
+  arrange(desc(acousticness)) %>%
+  slice(1)
+  Most_Acoustic
+  #It's Nice To Have AFriend is the most acoustic with acousticness score of 0.971
+  Least_Acoustic <- taylor_all_songs %>%
+  select(track_name,acousticness,track_release)%>%
+  arrange(acousticness) %>%
+  slice(1)
+  Least_Acoustic
+  #Change(Taylor's Version) is the least acoustic with acousticness score of 0.000191
+```
+```{r,echo=TRUE,eval=TRUE}
+ggplot(data=taylor_all_songs, aes(x=track_release, y=liveness)) +
+  geom_point(show.legend=TRUE) + labs(x="track_release",y="livenessS")+theme_bw()
+  Most_Live <- taylor_all_songs %>%
+  select(track_name,liveness,track_release)%>%
+  arrange(desc(liveness)) %>%
+  slice(1)
+  Most_Live
+  #Karma is the most live with liveness score of 0.594
+  Least_Live <- taylor_all_songs %>%
+  select(track_name,liveness,track_release)%>%
+  arrange(liveness) %>%
+  slice(1)
+  Least_Live
+  #The Story Of Us is the least live with liveness score of 0.0357
+```
+```{r,echo=TRUE,eval=TRUE}
+  Keys <- taylor_all_songs %>%
+  group_by(key_mode) %>%
+  count(key_mode)
+
+Keys
+#Taylor's top 3 favourite keys: G Major (n=50), C Major (n=41), F Major (n=30)
+#11 songs with no clear key
+#No songs in A# Minor, D Minor, F# Minor, G# Minor. That's a minor inconvenience!
+```
+```{r,echo=TRUE,eval=TRUE}
+
+  
+```
+```{r,echo=TRUE,eval=TRUE}
+
+  
+```
+```{r,echo=TRUE,eval=TRUE}
+
+  
+```
+```{r,echo=TRUE,eval=TRUE}
+
+  
+```
