@@ -116,7 +116,7 @@ The first app had a graph which showed how danceability, energy and tempo of Tay
 
 The second app showed a histogram of the various ratings of Taylor Swift's songs on Spotify(e.g. Speechiness, Acousticness etc.). I found that Taylor Swift actually had more variation within some of the statistics than I thought. For example, she had many songs with various different tempos, energy and moods. However, something that was interesting to note was that Taylor's music was not very acoustic, despite her reputation as an indie musician. She also mostly had songs that were low in speechiness and instrumentalness, showing that her songs were mostly consisted of vocal singing instead of instruments or verbal speech.
 
-The third app was a fun app I made to see the number of songs in a particular key. I noted that the more used keys amidst Swift's music were actually "simpler" keys with less accidentals in their key signature.
+The third app was a fun app I made to see the number of songs in a particular key. I noted that the more used keys amidst Swift's music were actually "simpler" keys with less accidentals in their key signature. It was interesting to note how she used more major than minor keys, which could have contributed to her music sounding happier.
 
 Overall, I found that while Taylor Swift's music had some similarities, she had quite a diverse portfolio of music. Perhaps it's not so much about the type and genre of music itself, but the person singing and making the music!
 # (5) How did you implement this entire project? Were there any new concepts that you learnt to implement some aspects of it?
