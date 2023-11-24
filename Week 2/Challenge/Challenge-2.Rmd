@@ -107,7 +107,7 @@ read_csv("playlist_data.csv")
 ```{r,echo=TRUE,eval=TRUE}
 # Assign the variable to a dataset 
 
-playlist_data <- read_csv("playlist_data.csv") 
+playlist_data <- read_csv("playlist_data.csv.csv") 
 
 ```
 
